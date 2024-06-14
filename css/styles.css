@@ -1,0 +1,428 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2024 | m4hfuj
+ */
+
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Tiny5&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+:root {
+
+  /**
+    * colors
+    */
+      
+  --primary-color: rgb(52, 52, 52);
+  --secondary-color: rgb(5, 94, 104);
+  --tertiary-color: rgb(98, 163, 136);
+  --quaternary-color: rgb(185, 210, 210);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --dark: #212529;
+  --dark-t: rgba(33, 37, 41, 0.8);
+
+
+  /**
+    * typography
+    */
+
+  --ff_poppins: "Poppins", sans-serif;
+  --ff_work_san: "Work Sans", sans-serif;
+  --ff-orbriton: "Orbitron", sans-serif;
+  --ff-roboto-condensed: "Roboto Condensed", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
+
+  /**
+    * size
+    */
+
+  --border-line: 1px solid rgba(255, 255, 255, 0.15);
+  --shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5); 
+  --navbar-height: 70px;
+  --settings-width: 350px;
+  --settings-width-neg: -350px;
+  --setting-font-size: 16px;
+
+}
+
+
+
+
+section {
+  background-color: var(--primary-color);
+  /* color:  var(--quaternary-color); */
+  color: beige;
+  font-family: var(--ff_work_san);
+}
+
+footer {
+  color: beige;
+  font-family: var(--ff_work_san);
+}
+
+a {
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*-----------------------------------*\
+  #NAVBAR
+\*-----------------------------------*/
+.navbar {
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+.navbar-bg-transparent {
+  transition: 0.3s;
+  background-color: var(--dark-t);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-family: var(--ff-orbriton);
+  font-size: 100px;
+}
+
+
+
+
+/*-----------------------------------*\
+  #SECTION HERO
+\*-----------------------------------*/
+#section-hero {
+  padding-bottom: 50px;
+}
+
+#section-hero span {
+  font-family: var(--ff-orbriton);
+  color: var(--tertiary-color);
+}
+
+
+
+/*-----------------------------------*\
+  #ANIMATION
+\*-----------------------------------*/
+#fade-in-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+#fade-in-from-left.appear {
+  opacity: 1;
+  transition: 1s;
+  transform: translateX(0px);
+}
+
+#fade-in-from-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+#fade-in-from-right.appear {
+  opacity: 1;
+  transition: 1s;
+  transform: translateX(0px);
+}
+
+#fade-in-from-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+}
+#fade-in-from-bottom.appear {
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(0px);
+}
+
+#zoom-in {
+  opacity: 0;
+  transform: scale(0.8,0.8);
+}
+#zoom-in.appear {
+  opacity: 1;
+  transition: 1s;
+  transform: scale(1,1);
+}
+
+
+/*-----------------------------------*\
+  #SECTION ASSURANCE
+\*-----------------------------------*/
+#section-assurance-card .card {
+  transition: 0.3s;
+  background: var(--secondary-color);
+}
+  
+#section-assurance-card .card:hover {
+  transition: 0.3s;
+  transform:  scale(1.1,1.1) translateY(-5px);
+}
+
+
+/*-----------------------------------*\
+  #SECTION FEATURED
+\*-----------------------------------*/
+#section-featured .box-border {
+  border-radius: 0%;
+  border: 1px solid var(--border-color);
+}
+
+#section-featured .bg-primary-color {
+  background: var(--primary-color);
+}
+
+#section-featured .badge-left {
+  left: 10px;
+  top: 10px;
+  position: absolute;
+  border: var(--border-line);
+  background: var(--quaternary-color);
+  color: var(--primary-color);
+  padding: 0 8px;
+  border-radius: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--ff-roboto-condensed);
+}
+
+#section-featured .badge-right {
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  border: var(--border-line);
+  background: var(--quaternary-color);
+  color: var(--primary-color);
+  padding: 0 8px;
+  border-radius: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--ff-roboto-condensed);
+}
+
+#content-card .box-links {
+  width: 50%;
+  text-align: center;
+  font-size: 23px;
+  padding: 5px 15px;
+  border-radius: 30px;
+  position: absolute;
+  top: 35%;
+  /* background-color: var(--primary-color); */
+  background-color: rgba(52, 52, 52, 0.7);
+  border: var(--border-line);
+  backdrop-filter: blur(10px);
+  /* visibility: hidden; */
+  transition: transform 300ms ease;
+  transform: scale(0,0);
+}
+
+#content-card.active .box-links {  
+  visibility: visible;
+  transition: transform 300ms ease;
+  transform: scale(1,1);
+}
+
+#content-card .box-links a {
+  text-decoration: none;
+  color: var(--quaternary-color);
+  transition: 0.3s;
+}
+
+#content-card .box-links a:hover {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+#content-card .box-links i {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+
+/* #content-card img {
+  height: 750px;
+  background: yellowgreen;
+} */
+@media (min-width: 576px) {
+  #content-card img {
+    height: 580px;
+  }
+  #content-card .box-links {
+    font-size: 40px;
+  }
+  #content-card .box-links i {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}
+@media (min-width: 768px) {
+  #content-card img {
+    height: 750px;
+  }
+}
+@media (min-width: 992px) {
+  #content-card img {
+    height: 250px;
+  }
+  #content-card .box-links {
+    font-size: 23px;
+  }
+  #content-card .box-links i {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+@media (min-width: 1200px) {
+  #content-card img {
+    height: 355px;
+  }
+}
+
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.footer-link {
+  font-size: .9rem;
+
+  display: block;
+  margin-bottom: 10px;
+  color: #ccc;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer-top {
+  border-bottom: var(--border-line);
+}
+
+.py-6 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.pt {
+  padding-top: 2rem;
+}
+
+
+
+/*-----------------------------------*\
+  #RULES
+\*-----------------------------------*/
+
+/* BORDER */
+body .myborder {
+  border: var(--border-line);
+  border-radius: 0%;
+}
+
+body .myborder-bottom {
+  border-bottom: var(--border-line);
+  border-radius: 0%;
+}
+
+body .myborder-top {
+  border-top: var(--border-line);
+  border-radius: 0%;
+}
+
+body .border-tb {
+  border-top: var(--border-line);
+  border-bottom: var(--border-line);
+  border-radius: 0%;
+}
+
+body .border-lr {
+  border-left: var(--border-line);
+  border-right: var(--border-line);
+  border-radius: 0%;
+}
+
+body .border-right{
+  border-right: var(--border-line);
+}
+
+
+
+/*-----------------------------------*\
+  #BG COLOR
+\*-----------------------------------*/
+body .bg-primary-color {
+  background: var(--primary-color);
+}
+body .bg-secondary-color {
+  background: var(--secondary-color);
+}
+body .bg-tertiary-color {
+  background: var(--tertiary-color);
+}
+body .bg-quaternary-color {
+  background: var(--quaternary-color);
+}
+
+
+
+/*-----------------------------------*\
+  #FONT COLOR
+\*-----------------------------------*/
+.fc-primary {
+  color: var(--primary-color);
+}
+.fc-secondary {
+  color: var(--secondary-color);
+}
+.fc-tertiary {
+  color: var(--tertiary-color);
+}
+.fc-quaternary {
+  color: var(--quaternary-color);
+}
+.fc-lime {
+  color: rgb(35, 151, 35);
+}
+.fc-dimm {
+  color: rgb(44, 110, 44);
+}
+.ff-roboto-condensed {
+  font-family: var(--ff-roboto-condensed);
+}
+.ff-roboto {
+  font-family: var(--ff-roboto);
+}
+.ff-orbriton {
+  font-family: var(--ff-orbriton);
+}
+
+
